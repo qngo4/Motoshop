@@ -1,0 +1,4 @@
+com\motoshop\spring\config\MyWebAppInitializer.class
+com\motoshop\spring\model\User.class
+com\motoshop\spring\config\AppConfig.class
+com\motoshop\spring\config\WebConfig.class
