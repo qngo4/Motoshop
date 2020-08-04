@@ -1,4 +1,4 @@
-package com.motoshop.spring.model;
+package com.motoshop.spring.entity;
 
 import java.util.ArrayList;
 import java.util.Collection;
