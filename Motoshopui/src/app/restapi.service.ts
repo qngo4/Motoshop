@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpRequest, HttpClient, HttpHeaders } from '@angular/common/http';
-import { JsonPipe } from '@angular/common';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +15,19 @@ export class RestapiService {
     let body2= body + body1;
     const headers = new HttpHeaders({Authorization: 'Basic ' });
     alert(headers);
-    return this.http.post("https://localhost:8080/", body2,{headers}) 
+    return this.http.post("https://localhost:8080/Motoshop/login/"+body2,{headers}) 
   }
+
+  signInAccount(username : String) {
+    const body = JSON.stringify({    "userId": 0,    "password": "password",	"role": 1,    "userName": "qgno41"});
+        return  this.http
+            .post('http://localhost:8080/Motoshop/login/userName/'+ username, body, { headers : new HttpHeaders({ 'Content-Type': 'application/json'})  });
+
+  }
+
+
+
+
 
 //   getUser(){
 //     let username='qngo4'
