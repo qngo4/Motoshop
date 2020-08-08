@@ -1,4 +1,4 @@
-package com.motoshop.spring.config;
+package com.motoshop.spring.security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

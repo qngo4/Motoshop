@@ -1,4 +1,4 @@
-package com.motoshop.spring.config;
+package com.motoshop.spring.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -9,13 +9,19 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.motoshop.spring.service.MotoUserDetailsService;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private UserDetailsService userDetailsService;
 
 	@Autowired
 	PasswordEncoder passwordEncoder;
@@ -25,11 +31,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder();
 	}
 
+	@Bean
+	public UserDetailsService userDetailsService() {
+		return new MotoUserDetailsService();
+	}
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().passwordEncoder(passwordEncoder).withUser("user")
-				.password(passwordEncoder.encode("123456")).roles("USER").and().withUser("admin")
-				.password(passwordEncoder.encode("123456")).roles("USER", "ADMIN");
+		auth.inMemoryAuthentication().passwordEncoder(passwordEncoder);
+		auth.userDetailsService(userDetailsService);
 	}
 
 	@Override
