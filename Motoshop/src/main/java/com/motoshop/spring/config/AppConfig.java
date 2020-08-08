@@ -18,10 +18,11 @@ import static org.hibernate.cfg.Environment.*;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScans(value = {
-		@ComponentScan("com.motoshop.spring.dao"),
-		@ComponentScan("com.motoshop.spring.service")
-})
+@ComponentScan
+//@ComponentScans(value = {
+//		@ComponentScan("com.motoshop.spring.dao"),
+//		@ComponentScan("com.motoshop.spring.service")
+//})
 public class AppConfig {
 	
 	@Autowired

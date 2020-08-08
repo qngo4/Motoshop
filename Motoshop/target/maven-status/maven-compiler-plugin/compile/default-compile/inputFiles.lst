@@ -1,6 +1,9 @@
 C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\config\MyWebAppInitializer.java
 C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\config\SecurityConfig.java
 C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\config\AppConfig.java
-C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\model\User.java
+C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\entity\User.java
+C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\model\UserModel.java
 C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\config\WebConfig.java
-C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\model\UserRoles.java
+C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\entity\UserRoles.java
+C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\config\MySecurityWebApplicationInitializer.java
+C:\Work\Workspace\Motoshop-api\Motoshop\src\main\java\com\motoshop\spring\controller\UserController.java
