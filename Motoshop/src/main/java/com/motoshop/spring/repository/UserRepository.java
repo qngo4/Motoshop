@@ -9,5 +9,7 @@ import com.motoshop.spring.entity.User;
 @Repository
 @Transactional
 public interface UserRepository extends JpaRepository<User, Long> {
-
+	
+	public User findByUserName(String userName);
+	
 }
