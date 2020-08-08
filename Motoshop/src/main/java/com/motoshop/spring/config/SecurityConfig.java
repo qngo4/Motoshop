@@ -48,12 +48,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 				// HTTP Basic authentication
 				.httpBasic().and().authorizeRequests()
-				.antMatchers(HttpMethod.GET, "/user/**").hasRole("USER")
-				.antMatchers(HttpMethod.POST, "/user").hasRole("ADMIN")
+				.antMatchers(HttpMethod.GET, "/user/**").permitAll()
+				.antMatchers(HttpMethod.POST, "/user/**").hasRole("ADMIN")
 				.antMatchers(HttpMethod.PUT, "/user/**").hasRole("ADMIN")
 				.antMatchers(HttpMethod.PATCH, "/user/**").hasRole("ADMIN")
 				.antMatchers(HttpMethod.DELETE, "/user/**").hasRole("ADMIN")
-				.and().csrf().disable()
+				.and()
+				.csrf().disable()
 				.formLogin().disable();
    }
 }
