@@ -1,0 +1,10 @@
+/src/main/webapp/WEB-INF/classes/
+
+build/
+/build
+/.settings
+.classpath
+.project
+/bin
+target/
+/target
