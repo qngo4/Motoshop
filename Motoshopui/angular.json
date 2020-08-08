@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Motoshopui"
+    }
+  },
+  "defaultProject": "Motoshopui",
+  "cli": {
+    "analytics": "1ba7931c-6bda-4f04-afd4-76ed65944897"
+  }
 }

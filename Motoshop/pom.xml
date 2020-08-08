@@ -8,6 +8,8 @@
 
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<spring.version>5.2.6.RELEASE</spring.version>
+		<hibernate.version>5.2.11.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
@@ -15,34 +17,34 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.3.10.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<!-- Spring ORM -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>4.3.10.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<!-- Srpring Security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
-			<version>5.3.3.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<!-- spring-security-config -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
-			<version>5.3.3.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<!-- spring-security-web -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>5.3.3.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 
@@ -50,14 +52,15 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.2.11.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 		<!-- Hibernate-C3P0 Integration -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-c3p0</artifactId>
-			<version>5.2.11.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
+		
 		<!-- c3p0 -->
 		<dependency>
 			<groupId>com.mchange</groupId>
