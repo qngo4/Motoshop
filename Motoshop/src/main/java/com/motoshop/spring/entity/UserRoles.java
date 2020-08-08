@@ -1,7 +1,5 @@
 package com.motoshop.spring.entity;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
