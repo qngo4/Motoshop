@@ -2,6 +2,7 @@
 
 build/
 /build
+.settings/
 /.settings
 .classpath
 .project

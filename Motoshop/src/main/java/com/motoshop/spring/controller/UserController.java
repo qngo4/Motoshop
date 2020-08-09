@@ -1,5 +1,6 @@
 package com.motoshop.spring.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,14 +12,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.motoshop.spring.model.UserModel;
+import com.motoshop.spring.service.UserService;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping(value = "/user")
 public class UserController {
+	
+	@Autowired
+	private UserService userService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public HttpEntity<UserModel> getUsers() {
+		userService.findAllUsers();
+
 		return new ResponseEntity<UserModel>(HttpStatus.OK);
 	}
 	

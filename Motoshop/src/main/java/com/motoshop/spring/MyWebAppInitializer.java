@@ -1,6 +1,10 @@
-package com.motoshop.spring.config;
+package com.motoshop.spring;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import com.motoshop.spring.config.AppConfig;
+import com.motoshop.spring.config.WebConfig;
+import com.motoshop.spring.security.SecurityConfig;
 
 public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
